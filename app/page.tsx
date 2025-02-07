@@ -1,15 +1,20 @@
-import Container from '@/components/customs/container';
-import { Button } from '@/components/ui/button';
-import React from 'react';
+import SectionAvis from "@/sections/section-avis";
+import SectionFaq from "@/sections/section-faq";
+import SectionHero from "@/sections/section-hero";
+import SectionRealisation from "@/sections/section-realisations";
+import SectionSocials from "@/sections/section-socials";
+
+import React from "react";
 
 const HomePage = () => {
   return (
-    <div>
-      <Container>
-        <h1>Home Page</h1>
-        <Button>Button</Button>
-      </Container>
-    </div>
+    <main className="min-h-screen grow">
+      <SectionHero />
+      <SectionSocials />
+      <SectionRealisation />
+      <SectionAvis />
+      <SectionFaq />
+    </main>
   );
 };
 
