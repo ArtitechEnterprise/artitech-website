@@ -1,17 +1,21 @@
-import Link from 'next/link';
-import Image from 'next/image';
-import React from 'react';
+"use client";
+
+import Link from "next/link";
+import Image from "next/image";
+import React from "react";
+import { useTheme } from "next-themes";
 
 const Logo = () => {
+  const { theme } = useTheme();
   return (
-    <div className='w-[200px] flex-shrink-0 mb-5 flex items-center justify-center'>
-      <Link href={'/'} className='w-full h-full'>
+    <div className="flex max-w-fit flex-shrink-0 items-center justify-center">
+      <Link href={"/"}>
         <Image
-          src={'/logo-dark.jpg'}
-          alt='Artitech logo'
-          title='Artitech'
-          loading='lazy'
-          className='w-[200px] h-[50px] object-contain object-left'
+          src={theme === "light" ? "/logo-dark.jpg" : "/logo-light.jpg"}
+          alt="Artitech logo"
+          title="Artitech"
+          loading="lazy"
+          className="w-fit object-contain"
           width={200}
           height={100}
         />
