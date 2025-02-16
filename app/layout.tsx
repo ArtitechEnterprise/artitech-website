@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 import { IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/providers/theme-provider";
-import Navbar from "@/components/customs/navbar";
+import { Toaster } from "@/components/ui/sonner";
+
 import Footer from "@/components/customs/footer";
+import Navbar from "@/components/customs/navbar";
 
 export const metadata: Metadata = {
   title: "Home | Artitech ",
@@ -31,6 +33,7 @@ export default function RootLayout({
         >
           <Navbar />
           {children}
+          <Toaster />
           <Footer />
         </ThemeProvider>
       </body>
