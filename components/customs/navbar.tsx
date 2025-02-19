@@ -45,6 +45,7 @@ import {
   SheetContent,
   SheetDescription,
   SheetHeader,
+  SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
 import Logo from "./logo";
@@ -186,6 +187,7 @@ export default function Navbar() {
             </SheetTrigger>
             <SheetContent side="left" className="overflow-y-scroll">
               <SheetHeader className="mb-7">
+                <SheetTitle className="hidden">Menu</SheetTitle>
                 <Logo />
                 <SheetDescription className="p-0 text-start">
                   Les artisants du digital

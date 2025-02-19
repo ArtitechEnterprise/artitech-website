@@ -52,7 +52,7 @@ export function ServiceLayout({
       </header>
       <main className="container mx-auto px-4 py-12">{children}</main>
       <motion.div
-        className="fixed bottom-8 right-8"
+        className="fixed bottom-8 right-8 z-20"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.5 }}

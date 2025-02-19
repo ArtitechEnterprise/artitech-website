@@ -138,13 +138,13 @@ function Footer() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.5 }}
           >
-            <div className="flex flex-col items-center justify-between md:flex-row">
+            <div className="flex flex-col justify-between md:flex-row">
               <div className="mb-4 text-center md:mb-0 md:text-left">
-                <p className="text-sm text-muted-foreground">
+                <p className="text-start text-sm text-muted-foreground">
                   © {new Date().getFullYear()} ARTITECH. Tous droits réservés.
                 </p>
               </div>
-              <div className="flex flex-col items-center space-y-2 md:flex-row md:space-x-4 md:space-y-0">
+              <div className="flex flex-col space-y-2 md:flex-row md:space-x-4 md:space-y-0">
                 {contactInfo.map((info, index) => (
                   <motion.div
                     key={index}

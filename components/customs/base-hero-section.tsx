@@ -23,7 +23,7 @@ export function BaseHeroSection({
   children,
 }: BaseHeroSectionProps) {
   return (
-    <div className="relative flex min-h-[80vmin] items-center justify-between overflow-hidden">
+    <div className="relative flex items-center justify-between overflow-hidden lg:min-h-[80vmin]">
       <BackgroundBeams />
       <div className="container relative z-10 mx-auto px-6">
         <div className="flex flex-col items-center md:flex-row">

@@ -45,7 +45,7 @@ export const Accordion: React.FC<AccordionProps> = ({
   }, [items.length, openItems]);
 
   return (
-    <div className="flex gap-5 md:h-[80vh]">
+    <div className="hidden gap-5 lg:flex">
       <div className="w-full space-y-2 md:w-1/2">
         {items.map((item, index) => (
           <AccordionItem

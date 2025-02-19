@@ -1,16 +1,7 @@
-// import Carousel from "@/components/customs/Carousel";
 import Container from "@/components/customs/container";
 import Heading from "@/components/customs/heading";
 import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
-import {
-  ArrowUp,
-  Copy,
-  File,
-  FileBarChart,
-  Plus,
-  Signature,
-  Table,
-} from "lucide-react";
+import { Cpu, Globe, Layout, Shield, Smartphone } from "lucide-react";
 import React from "react";
 
 const SectionRealisation = () => {
@@ -43,47 +34,39 @@ const Skeleton = () => (
 
 const items = [
   {
-    title: "The Dawn of Innovation",
-    description: "Explore the birth of groundbreaking ideas and inventions.",
-    header: <Skeleton />,
-    icon: <Copy className="h-4 w-4 text-neutral-500" />,
-  },
-  {
-    title: "The Digital Revolution",
-    description: "Dive into the transformative power of technology.",
-    header: <Skeleton />,
-    icon: <FileBarChart className="h-4 w-4 text-neutral-500" />,
-  },
-  {
-    title: "The Art of Design",
-    description: "Discover the beauty of thoughtful and functional design.",
-    header: <Skeleton />,
-    icon: <Signature className="h-4 w-4 text-neutral-500" />,
-  },
-  {
-    title: "The Power of Communication",
+    title: "Révolution IA",
     description:
-      "Understand the impact of effective communication in our lives.",
+      "Exploiter la puissance de l'intelligence artificielle pour transformer les processus métier.",
     header: <Skeleton />,
-    icon: <Table className="h-4 w-4 text-neutral-500" />,
+    icon: <Cpu className="h-4 w-4 text-neutral-500" />,
   },
   {
-    title: "The Pursuit of Knowledge",
-    description: "Join the quest for understanding and enlightenment.",
+    title: "Application Web Moderne",
+    description:
+      "Développer une solution web intuitive pour améliorer l'interaction et la gestion des données.",
     header: <Skeleton />,
-    icon: <ArrowUp className="h-4 w-4 text-neutral-500" />,
+    icon: <Globe className="h-4 w-4 text-neutral-500" />,
   },
   {
-    title: "The Joy of Creation",
-    description: "Experience the thrill of bringing ideas to life.",
+    title: "Cyber Sécurité",
+    description:
+      "Créer un site dédié à la prévention des cyberattaques et à la sécurisation des informations sensibles.",
     header: <Skeleton />,
-    icon: <Plus className="h-4 w-4 text-neutral-500" />,
+    icon: <Shield className="h-4 w-4 text-neutral-500" />,
   },
   {
-    title: "The Spirit of Adventure",
-    description: "Embark on exciting journeys and thrilling discoveries.",
+    title: "Design UI/UX",
+    description:
+      "Optimiser l'interface utilisateur pour offrir une expérience engageante et accessible.",
     header: <Skeleton />,
-    icon: <File className="h-4 w-4 text-neutral-500" />,
+    icon: <Layout className="h-4 w-4 text-neutral-500" />,
+  },
+  {
+    title: "Application Mobile Innovante",
+    description:
+      "Concevoir une application mobile performante, adaptée aux usages modernes en mobilité.",
+    header: <Skeleton />,
+    icon: <Smartphone className="h-4 w-4 text-neutral-500" />,
   },
 ];
 

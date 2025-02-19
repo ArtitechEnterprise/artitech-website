@@ -25,7 +25,7 @@ export function ServicePageLayout({
 }: ServicePageProps & { iconMap: Record<string, LucideIcon> }) {
   return (
     <ServiceLayout title={title} description={description}>
-      <div className="space-y-16 px-4 py-8 sm:px-6 lg:px-8">
+      <div className="space-y-16 py-8 lg:px-8">
         <ServiceSection
           title={`Nos Services de ${title}`}
           services={services}
