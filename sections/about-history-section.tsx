@@ -1,74 +1,99 @@
 "use client";
 
-import Container from "@/components/customs/container";
-import Heading from "@/components/customs/heading";
-import ContainerAnimation from "@/lib/aos-animation";
-import Image from "next/image";
-import { motion, useInView } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import ReadMoreLess from "@/components/customs/lire-plus-moins";
+import Image from "next/image";
+import { Card, CardContent } from "@/components/ui/card";
 
-const AboutHistorySection = () => {
+export function ArtitechHistory() {
   const ref = useRef(null);
-  const isInView = useInView(ref);
-  return (
-    <Container className="overflow-hidden">
-      <Heading title="Histoire de Artitech" text="Decouver notre histoire" />
-      <div className="flex flex-col gap-10 md:flex-row">
-        <ContainerAnimation>
-          <div className="mt-5 space-y-5 md:w-1/2">
-            <motion.p
-              ref={ref}
-              className="leading-8"
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5 }}
-            >
-              Tout a commencé avec une vision : celle de mettre la puissance de
-              l’intelligence artificielle et du développement logiciel au
-              service des entreprises. Constatant les défis auxquels les
-              entreprises faisaient face en matière d’automatisation, de
-              cybersécurité et d’innovation digitale, les fondateurs d’Artitech
-              ont décidé de créer une agence capable de transformer ces
-              obstacles en opportunités.
-            </motion.p>
-            <motion.p
-              className="leading-8"
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >
-              <ReadMoreLess
-                text="Fondée par une équipe d’experts passionnés par la technologie et
-              l’innovation, Artitech est née de la volonté d’accompagner les
-              entreprises dans leur transformation numérique. Dès ses débuts,
-              l’agence s’est spécialisée dans le développement d’algorithmes
-              intelligents, la création de solutions logicielles sur mesure et
-              la sécurisation des infrastructures numériques."
-              />
-            </motion.p>
-          </div>
-        </ContainerAnimation>
-        <ContainerAnimation>
-          <div
-            className="flex items-center justify-center overflow-hidden rounded-md border bg-card shadow-md lg:w-1/2"
-            data-aos="fade-left"
-            data-aos-easing="linear"
-            data-aos-duration="600"
-          >
-            <Image
-              src={"/history-image.png"}
-              width={500}
-              height={400}
-              objectFit="cover"
-              alt="image de l'histoire de artitech"
-              loading="lazy"
-            />
-          </div>
-        </ContainerAnimation>
-      </div>
-    </Container>
-  );
-};
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"],
+  });
 
-export default AboutHistorySection;
+  const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [0, 1, 0]);
+  const scale = useTransform(scrollYProgress, [0, 0.5, 1], [0.8, 1, 0.8]);
+
+  return (
+    <section ref={ref} className="overflow-hidden bg-background py-20">
+      <div className="container mx-auto px-4">
+        <motion.h2
+          className="mb-12 text-4xl font-bold md:text-5xl"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          L&apos;Histoire d&apos;Artitech
+        </motion.h2>
+        <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-2">
+          <motion.div style={{ opacity, scale }}>
+            <Image
+              src="/history-image.png"
+              alt="Fondateurs d'Artitech"
+              width={600}
+              height={600}
+              className="rounded-lg shadow-2xl"
+            />
+          </motion.div>
+          <div>
+            <Card className="bg-primary text-primary-foreground">
+              <CardContent className="p-6">
+                <motion.h3
+                  className="mb-4 text-2xl font-semibold"
+                  initial={{ opacity: 0, x: -50 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.8, delay: 0.2 }}
+                >
+                  Une Vision Audacieuse
+                </motion.h3>
+                <motion.p
+                  className="mb-4"
+                  initial={{ opacity: 0, x: -50 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.8, delay: 0.4 }}
+                >
+                  Artitech est née en 2025 de la vision audacieuse de
+                  l&apos;expert en technologie : <strong>Mr Dylan</strong>. Son
+                  ambition ? Révolutionner le paysage numérique en combinant
+                  l&apos;art et la technologie de manière inédite.
+                </motion.p>
+                <motion.p
+                  initial={{ opacity: 0, x: -50 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.8, delay: 0.6 }}
+                >
+                  Dès ses premiers mois, Artitech a attiré l&apos;attention de
+                  grands noms de l&apos;industrie grâce à ses approches
+                  novatrices et sa capacité à repousser les limites de
+                  l&apos;innovation.
+                </motion.p>
+              </CardContent>
+            </Card>
+            <motion.div
+              className="mt-8 space-y-4"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.8 }}
+            >
+              <h4 className="text-xl font-semibold">Nos Réalisations Clés</h4>
+              <ul className="list-disc space-y-2 pl-5">
+                <li>
+                  Lancement de notre première plateforme d&apos;IA créative
+                </li>
+                <li>Partenariat stratégique avec une entreprise du CAC 40</li>
+                <li>
+                  Obtention d&apos;un financement de série A de 10 millions
+                  d&apos;euros
+                </li>
+                <li>
+                  Expansion de l&apos;équipe à 50 talents en seulement 6 mois
+                </li>
+              </ul>
+            </motion.div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

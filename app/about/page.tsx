@@ -1,15 +1,15 @@
 import { AboutHeroSection } from "@/sections/about-hero-section";
-import AboutHistorySection from "@/sections/about-history-section";
-import AboutImpactEtValeurs from "@/sections/about-impact-valeur";
-import AboutMissionVision from "@/sections/about-mission-vision";
+import { ArtitechHistory } from "@/sections/about-history-section";
+import { ImpactValuesSection } from "@/sections/about-impact-valeur";
+import { MissionVisionSection } from "@/sections/about-mission-vision";
 
 const AboutPage = () => {
   return (
     <main className="min-h-screen grow">
       <AboutHeroSection />
-      <AboutHistorySection />
-      <AboutMissionVision />
-      <AboutImpactEtValeurs />
+      <ArtitechHistory />
+      <MissionVisionSection />
+      <ImpactValuesSection />
     </main>
   );
 };

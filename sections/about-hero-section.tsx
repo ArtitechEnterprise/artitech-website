@@ -11,8 +11,8 @@ export function AboutHeroSection() {
       title="A propos de nous"
       subtitle={
         <span className="text-3xl">
-          Notre ambition ? Transformer chaque idée en une solution sur-mesure
-          qui façonne l&apos;avenir et captive l&apos;imagination.
+          Transformer chaque idée en une solution sur-mesure qui façonne
+          l&apos;avenir.
         </span>
       }
       description="Nous sommes une équipe de professionnels dévoués, engagés à fournir des solutions digital exceptionnelles qui permettent aux entreprises de réussir dans le paysage numérique."
