@@ -14,17 +14,16 @@ Réactivité, expertise et innovation au service de votre entreprise."
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="rounded-lg p-6"
+        className="hidden rounded-lg lg:block"
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          width={500}
-          height={500}
+          width={400}
+          height={400}
           loading="lazy"
-          onLoad={(e) => (e.currentTarget.style.opacity = "1")}
-          src="/contact-image.svg"
+          src="/contact-image.png"
           alt="service architech"
-          className="aspect-square h-full w-full object-contain"
+          className="aspect-square h-full w-full object-cover lg:object-top"
         />
       </motion.div>
     </BaseHeroSection>

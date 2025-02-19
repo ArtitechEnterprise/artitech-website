@@ -76,8 +76,8 @@ const ContactForm = () => {
   return (
     <>
       <Form {...form}>
-        <Container className="mt-10 flex gap-8">
-          <div className="hidden w-1/2 overflow-hidden rounded-lg lg:block">
+        <Container className="my-10 flex flex-col-reverse gap-8 space-y-6 lg:flex lg:flex-row">
+          <div className="h-[400px] w-full overflow-hidden rounded-lg lg:block lg:h-auto lg:w-1/2">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63675.71011384752!2d9.730523251948563!3d4.074942848809234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x10610e80fccb2193%3A0x6c9146f5bf6f933e!2sLogbessou%20-%20SunShineCity%2C%20Douala!5e0!3m2!1sfr!2scm!4v1739620463754!5m2!1sfr!2scm"
               width="600"
@@ -85,8 +85,9 @@ const ContactForm = () => {
               style={{ border: 0 }}
               allowFullScreen
               loading="lazy"
+              className="h-full w-full"
               referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
+            />
           </div>
           <form className="lg:w-1/2" onSubmit={handleSubmit(onSubmit)}>
             <div className="mb-5 space-y-3">

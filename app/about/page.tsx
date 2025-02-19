@@ -1,4 +1,3 @@
-import Equipes from "@/sections/about-equipes";
 import { AboutHeroSection } from "@/sections/about-hero-section";
 import AboutHistorySection from "@/sections/about-history-section";
 import AboutImpactEtValeurs from "@/sections/about-impact-valeur";
@@ -10,7 +9,6 @@ const AboutPage = () => {
       <AboutHeroSection />
       <AboutHistorySection />
       <AboutMissionVision />
-      <Equipes />
       <AboutImpactEtValeurs />
     </main>
   );
