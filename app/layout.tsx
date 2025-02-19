@@ -10,9 +10,9 @@ import IndicatorOnScroll from "@/components/customs/indicator-scroll";
 import { LoadingAnimation } from "@/components/customs/loading-ainmation";
 
 export const metadata: Metadata = {
-  title: "Home | Artitech ",
+  title: "ARTITECH | HOME",
   description:
-    "Artitech entreprise de développement d'application web et mobile à Douala et Canada",
+    "ARTITECH entreprise de développement d'application web et mobile à Douala et Canada",
   openGraph: {
     title:
       "ARTITECH | Artitech entreprise de développement d'application web et mobile à Douala et Canada",

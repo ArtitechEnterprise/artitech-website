@@ -2,21 +2,25 @@ export const accordionItems = [
   {
     title: "Consultation",
     content:
-      "Next.js is a React framework for building full-stack web applications. You use React Components to build user interfaces, and Next.js for additional features and optimizations.",
+      "Bénéficiez d’un accompagnement personnalisé pour transformer vos idées en solutions concrètes. Nous analysons vos besoins, vous conseillons sur les meilleures technologies et définissons ensemble la stratégie idéale pour votre projet.",
+    image: "/accordion-consultation.jpg",
   },
   {
-    title: "Conception et prototypage",
+    title: "Conception et Prototypage",
     content:
-      "Next.js allows you to render React components on the server side before sending the HTML to the client. This can result in faster page loads and improved SEO.",
+      "De l'idée à la maquette interactive, nous concevons des expériences utilisateur engageantes et intuitives. Grâce à des outils de prototypage avancés, nous vous aidons à visualiser votre projet avant son développement.",
+    image: "/accordion-design.jpg",
   },
   {
-    title: "Developpement Web et Mobile",
+    title: "Développement Web et Mobile",
     content:
-      "Framer Motion is a popular animation library for React. It allows you to create fluid animations and gestures in your web applications with a simple and powerful API.",
+      "Des applications performantes et évolutives, conçues sur mesure avec les technologies les plus récentes. Que ce soit pour le web ou le mobile, nous créons des solutions fiables et optimisées pour une expérience utilisateur exceptionnelle.",
+    image: "/accordion.web-mobile.jpg",
   },
   {
     title: "Centre de Service",
     content:
-      "Chez Artitech, nous croyons que l'innovation et l'efficacité sont les clés du succès dans le secteur technologique. C'est pourquoi nous avons réuni une équipe d'experts passionnés, chacun apportant des compétences uniques et une expérience précieuse dans les domaines de l'ingénierie, de l'automatisation et des solutions numériques.",
+      "Nous mettons notre expertise à votre service pour assurer la maintenance, l’optimisation et le support de vos solutions numériques. Notre engagement : garantir la continuité et l’efficacité de vos outils au quotidien.",
+    image: "/accordion-service.jpg",
   },
 ];

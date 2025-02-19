@@ -70,7 +70,7 @@ export function FeaturedProjectSection({
               </ul>
             </TabsContent>
           </Tabs>
-          <Button size="lg" className="group mt-4">
+          <Button size="lg" className="group mt-4 w-full">
             Voir l&apos;Étude de Cas Complète
             <ChevronRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
           </Button>

@@ -8,14 +8,14 @@ import { useTheme } from "next-themes";
 const Logo = () => {
   const { theme } = useTheme();
   return (
-    <div className="flex max-w-fit flex-shrink-0 items-center justify-center">
+    <div className="flex flex-shrink-0 items-center justify-start">
       <Link href={"/"}>
         <Image
-          src={theme === "light" ? "/logo-dark.jpg" : "/logo-light.jpg"}
+          src={theme === "light" ? "/logo-dark.png" : "/logo-light.png"}
           alt="Artitech logo"
           title="Artitech"
           loading="lazy"
-          className="w-fit object-contain"
+          className="mb-4 w-fit object-contain md:mb-0 md:h-[65px] md:w-[200px]"
           width={200}
           height={100}
         />

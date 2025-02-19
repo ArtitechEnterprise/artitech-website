@@ -1,18 +1,12 @@
 "use client";
 import React from "react";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-} from "../ui/card";
+import { Card, CardContent, CardDescription, CardHeader } from "../ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
-import Image from "next/image";
+import { Star } from "lucide-react";
 
 const CardAvis = () => {
   return (
-    <Card className="p-4">
+    <Card className="w-[400px] p-4">
       <CardHeader className="flex-row items-center gap-3 p-0">
         <Avatar>
           <AvatarImage src="/avatar-image.jpg" />
@@ -25,23 +19,18 @@ const CardAvis = () => {
           </CardDescription>
         </div>
       </CardHeader>
-      <CardContent className="pt-2">
-        <p className="text-sm leading-6">
+      <CardContent className="pb-1 pt-2">
+        <p className="text-sm">
           &quot;Grâce à l’application, nous avons amélioré la planification de
           la maintenance, ce qui a réduit les coûts et amélioré notre
           productivité.&quot;
         </p>
       </CardContent>
-      <CardFooter className="pb-0">
-        <Image
-          src={"/logo-dark.jpg"}
-          alt="logo"
-          width={100}
-          height={100}
-          loading="lazy"
-          className="w-24"
-        />
-      </CardFooter>
+      <div className="flex items-center gap-1 px-5">
+        {Array.from({ length: 5 }, (_, index) => (
+          <Star key={index} className="h-4 w-4 fill-blue-500 stroke-none" />
+        ))}
+      </div>
     </Card>
   );
 };
