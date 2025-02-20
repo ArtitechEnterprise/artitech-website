@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import Typed from "typed.js";
 import Tilt from "react-parallax-tilt";
 import { BaseHeroSection } from "@/components/customs/base-hero-section";
-import { Carousel } from "@/components/customs/carousel";
+import { Carousel } from "@/components/customs/Carousel";
 
 const slideData = [
   {
