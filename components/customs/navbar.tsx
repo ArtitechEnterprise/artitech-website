@@ -20,6 +20,8 @@ import {
   Monitor,
   Shield,
   Lightbulb,
+  TrendingUp,
+  PieChart,
 } from "lucide-react";
 import SwitchTheme from "./switch-theme";
 
@@ -101,6 +103,18 @@ const services = [
     description: "Guidez votre transformation numérique avec notre expertise.",
     icon: Lightbulb,
   },
+  {
+    title: "Infographie",
+    href: "/services/infographie",
+    description: "Transformez vos données en visuels captivants.",
+    icon: PieChart,
+  },
+  {
+    title: "Marketing Digital",
+    href: "/services/marketing-digital",
+    description: "Boostez votre présence en ligne et attirez plus de clients.",
+    icon: TrendingUp,
+  },
 ];
 
 export default function Navbar() {
@@ -136,7 +150,7 @@ export default function Navbar() {
                 )}
                 {item.name === "Services" && (
                   <NavigationMenuContent>
-                    <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                    <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-3 lg:w-[850px]">
                       {services.map((service) => (
                         <ListItem
                           key={service.title}
@@ -189,8 +203,8 @@ export default function Navbar() {
               <SheetHeader className="mb-7">
                 <SheetTitle className="hidden">Menu</SheetTitle>
                 <Logo />
-                <SheetDescription className="p-0 text-start">
-                  Les artisants du digital
+                <SheetDescription className="p-0 text-start underline underline-offset-4">
+                  Les artisants de la tech
                 </SheetDescription>
               </SheetHeader>
               <nav className="space-y-3 overflow-hidden">
@@ -233,7 +247,7 @@ export default function Navbar() {
                                   ease: [0.04, 0.62, 0.23, 0.98],
                                 }}
                               >
-                                <ul className="my-5 space-y-4 border-l border-input ps-2">
+                                <ul className="my-2 space-y-4 border-l border-input ps-2">
                                   {services.map((item) => (
                                     <li
                                       key={item.title}
@@ -242,13 +256,13 @@ export default function Navbar() {
                                       <Link href={item.href}>
                                         <div className="flex items-center gap-2">
                                           <item.icon className="h-5 w-5" />
-                                          <span className="text-sm">
+                                          <span className="truncate text-sm">
                                             {item.title}
                                           </span>
                                         </div>
-                                        <p className="mt-2 text-xs dark:text-muted-foreground">
+                                        {/* <p className="mt-2 text-xs dark:text-muted-foreground">
                                           {item.description}
-                                        </p>
+                                        </p> */}
                                       </Link>
                                     </li>
                                   ))}
