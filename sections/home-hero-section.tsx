@@ -49,6 +49,7 @@ export function HomeHeroSection() {
 
   return (
     <BaseHeroSection
+      href="/contact"
       title="Solutions digitales qui propulsent votre entreprise"
       subtitle={<span className="text-blue-500" ref={typedRef}></span>}
       description="Nous transformons vos idées en expériences digitales innovantes en combinant IA, développement web & mobile et cybersécurité de pointe pour propulser votre entreprise."
