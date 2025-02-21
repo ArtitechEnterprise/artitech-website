@@ -2,8 +2,9 @@
 
 import React, { JSX } from "react";
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import { BackgroundBeams } from "@/components/ui/background-beams";
+import Link from "next/link";
 
 interface BaseHeroSectionProps {
   title: string;
@@ -11,6 +12,7 @@ interface BaseHeroSectionProps {
   description: string;
   primaryCTA?: string;
   secondaryCTA?: string;
+  href?: string;
   children?: React.ReactNode;
 }
 
@@ -21,15 +23,16 @@ export function BaseHeroSection({
   primaryCTA,
   secondaryCTA,
   children,
+  href,
 }: BaseHeroSectionProps) {
   return (
-    <div className="relative flex items-center justify-between overflow-hidden lg:min-h-[80vmin]">
+    <div className="relative flex items-center justify-between overflow-hidden">
       <BackgroundBeams />
       <div className="container relative z-10 mx-auto px-6">
         <div className="flex flex-col items-center md:flex-row">
           <div className="text-left md:w-1/2">
             <motion.h1
-              className="mt-8 scroll-m-20 text-3xl font-extrabold leading-8 tracking-tight lg:mt-0 lg:w-5/6 lg:text-5xl"
+              className="mt-8 scroll-m-20 text-3xl font-extrabold leading-8 tracking-tight lg:mt-0 lg:text-6xl"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
@@ -45,7 +48,7 @@ export function BaseHeroSection({
               {subtitle}
             </motion.h2>
             <motion.p
-              className="leading-7 lg:w-5/6 [&:not(:first-child)]:mt-6"
+              className="leading-7 lg:w-5/6"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
@@ -59,9 +62,12 @@ export function BaseHeroSection({
               className="mt-8"
             >
               {primaryCTA && (
-                <Button size="lg" className="mb-4 mr-6 md:mb-0">
+                <Link
+                  href={href as string}
+                  className={`mb-4 mr-6 md:mb-0 ${buttonVariants({ variant: "default", size: "lg" })}`}
+                >
                   {primaryCTA}
-                </Button>
+                </Link>
               )}
               {secondaryCTA && (
                 <Button size="lg" variant="outline">
