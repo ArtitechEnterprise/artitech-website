@@ -32,23 +32,102 @@ const footerLinks = [
   {
     title: "Services",
     items: [
-      "Développement Web",
-      "Design UI/UX",
-      "IA & Automatisation",
-      "Cybersécurité",
+      {
+        id: 0,
+        label: "Développement Web",
+        path: "/services/web-development",
+      },
+      {
+        id: 1,
+        label: "API Integration",
+        path: "/services/api-integration",
+      },
+
+      {
+        id: 4,
+        label: "Design UI/UX",
+        path: "/services/ui-ux-design",
+      },
+      {
+        id: 5,
+        label: "Intelligence Artificielle et Automatisation",
+        path: "/services/ai-automation",
+      },
+      {
+        id: 6,
+        label: "Cybersécurité",
+        path: "/services/cybersecurity",
+      },
+      {
+        id: 7,
+        label: "Développement logiciel",
+        path: "/services/software-development",
+      },
+      {
+        id: 8,
+        label: "Conseil et Accompagnement Digital",
+        path: "/services/digital-consulting",
+      },
+      {
+        id: 9,
+        label: "Infographie",
+        path: "/services/infographie",
+      },
+      {
+        id: 10,
+        label: "Marketing Digital",
+        path: "/services/marketing-digital",
+      },
     ],
   },
   {
     title: "Entreprise",
-    items: ["À propos", "Carrières", "Partenaires", "Blog"],
+    items: [
+      {
+        id: 0,
+        label: "About ",
+        path: "about",
+      },
+      {
+        id: 1,
+        label: "Carrières",
+        path: "#",
+      },
+      {
+        id: 2,
+        label: "Partenaires",
+        path: "#",
+      },
+      {
+        id: 3,
+        label: "Blog",
+        path: "#",
+      },
+    ],
   },
   {
     title: "Support",
     items: [
-      "FAQ",
-      "Contact",
-      "Politique de confidentialité",
-      "Conditions d'utilisation",
+      {
+        id: 0,
+        label: "FAQ",
+        path: "#",
+      },
+      {
+        id: 1,
+        label: "Contact",
+        path: "contact",
+      },
+      {
+        id: 2,
+        label: "Politique de confidentialité",
+        path: "#",
+      },
+      {
+        id: 3,
+        label: "Conditions d'utilisation",
+        path: "#",
+      },
     ],
   },
 ];
@@ -85,7 +164,7 @@ function Footer() {
                   />
                 )}
                 <span className="mt-5 text-muted-foreground">
-                  Les artisants du digital
+                  Les artisants de la tech
                 </span>
               </div>
 
@@ -120,10 +199,10 @@ function Footer() {
                       transition={{ type: "spring", stiffness: 300 }}
                     >
                       <Link
-                        href="#"
+                        href={item.path}
                         className="text-muted-foreground transition-colors hover:text-primary"
                       >
-                        {item}
+                        {item.label}
                       </Link>
                     </motion.li>
                   ))}
