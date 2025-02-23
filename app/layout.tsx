@@ -11,8 +11,15 @@ import { LoadingAnimation } from "@/components/customs/loading-ainmation";
 
 export const metadata: Metadata = {
   title: "ARTITECH | HOME",
+  keywords: [
+    "développement web, cybersécurité, Marketing Digital",
+    "applications mobile",
+    "integration d'api Rest",
+    "UIUXDesign",
+  ],
   description:
     "ARTITECH entreprise de développement d'application web et mobile à Douala et Canada",
+  authors: [{ name: "ARTITECH Teams", url: "https://artitech.vercel.app" }],
   openGraph: {
     title:
       "ARTITECH | Artitech entreprise de développement d'application web et mobile à Douala et Canada",
